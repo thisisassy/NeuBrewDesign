@@ -1,12 +1,12 @@
 import React from "react"
 import { Link } from "gatsby"
 import Layout from "../components/layout"
-import "../styles/global.scss"
+import "../components/index.scss"
 
 
 const IndexPage = () => {
   return (
-    <Layout className={`contents`}>
+    <Layout>
       <section className={`NewestEntry`}>
         <article>
           <figure></figure>

@@ -4,17 +4,9 @@
 footer {
   margin: 72px 0 0;
   padding: 0 24px;
+  background: $light-white;
   @include mq(){
     padding: 0 64px;
-  }
-
-  div {
-    display: flex;
-    flex-direction: column;
-    @include mq(){
-      flex-direction: row;
-      justify-content: space-between;
-    }
   }
   h1,
   ul {
@@ -26,5 +18,35 @@ footer {
   }
   h3 {
     font-size: $spacing-2;
+  }
+}
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  padding-top: $spacing-5;
+  @include mq(){
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.footer__nav {
+  li {
+    line-height: 1.5;
+  }
+}
+.foot__category {
+  li {
+    line-height: 1.9;
+  }
+}
+.footer__outer {
+  margin: $spacing-7 0 0;
+  padding-bottom: $spacing-5;
+  .copyright {
+    font-size: 14px;
+    text-align: center;
+    @include mq(){
+      text-align: end;
+    }
   }
 }
