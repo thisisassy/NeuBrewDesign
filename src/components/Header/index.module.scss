@@ -1,0 +1,37 @@
+@import '../../styles/mixin.scss';
+@import '../../styles/variables.scss';
+
+header {
+  margin: 0 auto 56px;
+  padding: 0 24px;
+  box-shadow: 1px 1px 0 rgb(0 0 0 / 8%);
+  @include mq() {
+    margin: 0 auto 96px;
+    padding: 0 64px;
+  }
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  h1 {
+    font-size: 18px;
+    line-height: $spacing-6;
+    @include mq(){
+      line-height: $spacing-9;
+    }
+  }
+  li {
+    margin: 0 $spacing-2 0 0;
+    font-size: $spacing-2;
+    &:last-child {
+      margin-right: 0;
+    }
+    @include mq(xs){
+      display: none;
+    }
+    @include mq(){
+      display: inline-block;
+    }
+  }
+}

@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
+import "../Footer/index.module.scss"
 
 const Footer = () => {
   return (
