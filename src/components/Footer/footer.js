@@ -8,9 +8,10 @@ const Footer = () => {
       <div className={styles.footer__inner}>
         <h1>Neu Brew Design</h1>
         <ul className={styles.footer__nav}>
-          <li className={styles.nav__item}><Link to={`/`}>All Posts</Link></li>
-          <li className={styles.nav__item}><Link to={`/`}>About</Link></li>
-          <li className={styles.nav__item}><Link to={`/`}>Contact</Link></li>
+          <li><Link to={`/`}>All Posts</Link></li>
+          <li><Link to={`/about/`}>About</Link></li>
+          <li><Link to={`/policy/`}>Privacy Policy</Link></li>
+          <li><Link to={`/contact/`}>Contact</Link></li>
         </ul>
         <div className={styles.foot__category}>
           <li>Blog</li>
