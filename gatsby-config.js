@@ -11,9 +11,12 @@ module.exports = {
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
-    "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    "gatsby-remark-images",
+    "gatsby-remark-prismjs",
+    "gatsby-remark-autolink-headers",
+    "gatsby-transformer-remark",
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -31,10 +34,10 @@ module.exports = {
       __key: "pages",
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-source-filesystem`,
       options: {
-        name: "posts",
-        path: "./src/pages/",
+        name: `posts`,
+        path: `${__dirname}/src/posts`,
       },
       __key: "posts",
     },
