@@ -1,11 +1,10 @@
 ---
 title: "Gatsbyブログにもこの記事書いた人を表示させる"
-slug: 2021-09-11-author-component
-date: 2021-09-11
+slug: "2021-09-11-author-component"
+date: "2021-09-11"
 draft: false
 category: ["Tech"]
 tags: ["GatsbyJS"]
-thumbnail: ./thumbnail.jpg
 ---
 
 こんにちは、[Haruka](https://twitter.com/neubrewdesign)です。
@@ -54,9 +53,6 @@ export default Author
 // blog-post.js
 import Author from "../components/author"
 
-...
-
-<Author />
 ```
 表示されたら、スタイルを当てていきましょう。
 

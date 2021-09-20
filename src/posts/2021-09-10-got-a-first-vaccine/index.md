@@ -1,7 +1,7 @@
 ---
 title: "ワクチン接種1回目の記録"
-slug: 2021-09-10-got-a-first-vaccine
-date: 2021-09-10
+slug: "2021-09-10-got-a-first-vaccine"
+date: "2021-09-10"
 draft: false
 category: ["Life"]
 thumbnail: ./hero.png

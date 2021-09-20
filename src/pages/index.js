@@ -57,14 +57,6 @@ export const query = graphql`
           date(formatString: "MMM D YYYY")
           category
           slug
-          thumbnail {
-            childImageSharp {
-              gatsbyImageData(width: 800)
-              fluid {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
         }
         excerpt(pruneLength: 140)
       }
@@ -78,14 +70,6 @@ export const query = graphql`
           date(formatString: "MMM D YYYY")
           category
           slug
-          thumbnail {
-            childImageSharp {
-              gatsbyImageData(width: 800)
-              fluid {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
         }
         excerpt(pruneLength: 140)
       }
