@@ -10,11 +10,6 @@ header {
     margin: 0 auto 96px;
     padding: 0 64px;
   }
-  div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
   h1 {
     font-size: 18px;
     line-height: $spacing-6;
@@ -35,4 +30,9 @@ header {
       display: inline-block;
     }
   }
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

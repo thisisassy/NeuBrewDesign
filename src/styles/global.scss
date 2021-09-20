@@ -47,6 +47,13 @@ a {
 main {
   flex: 1;
 }
+section {
+  padding: 0 24px;
+  @include mq(){
+    padding: 0 64px;
+  }
+
+}
 .wrapper {
   display: flex;
   flex-direction: column;
