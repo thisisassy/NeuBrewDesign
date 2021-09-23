@@ -1,0 +1,15 @@
+@import '../../styles/mixin.scss';
+@import '../../styles/variables.scss';
+
+.sidebar {
+  width: 100%;
+  @include mq() {
+    max-width: 30%;
+  }
+}
+.sideModule {
+  padding: 32px 24px;
+}
+.profileModule {
+  background: $light-white;
+}
