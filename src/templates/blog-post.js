@@ -1,12 +1,14 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
+import Seo from "../components/seo"
 
 const BlogPost = ({ data }) => {
   const post = data.markdownRemark
 
   return (
     <Layout>
+      <Seo pagetitle={post.frontmatter.title} />
       <article className={`entry`}>
         <div className={`entry__inner`}>
           <header className={`entry__header`}>

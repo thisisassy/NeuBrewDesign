@@ -1,10 +1,11 @@
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.neubrewdesign.com",
-    title: "NeuBrewDesign",
+    title: "Neu Brew Design",
     author: "Haruka Ashley",
-    description: "こんにちは。デザイン、コーディング、旅行、本のメモ、生活の向上と生き方についての話題を扱うブログです。",
+    description: "デザインとコーディングのメモを中心に生活と読書、考えたことを記録しています",
     lang: "ja",
+    locale: "ja_JP",
   },
   plugins: [
     "gatsby-plugin-sass",
@@ -17,11 +18,21 @@ module.exports = {
     "gatsby-remark-prismjs",
     "gatsby-remark-autolink-headers",
     "gatsby-transformer-remark",
+    "gatsby-plugin-react-helmet",
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "G-2330Z1HN6E",
+        head: true,
+        respectDNT: true,
+        exclude: [`/category/**`, `/tag/**`],
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: "./src/images/",
+        path: `${__dirname}/src/images/`,
       },
       __key: "images",
     },
@@ -29,7 +40,7 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "pages",
-        path: "./src/pages/",
+        path: `${__dirname}/src/pages/`,
       },
       __key: "pages",
     },
@@ -54,5 +65,24 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: `/sitemap.xml`,
+        excludes: [`/success`],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Neu Brew Design`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#A0D8EF`,
+        display: `standalone`,
+        icon: `./src/images/favicon.png`,
+      },
+    },
+    "gatsby-plugin-offline",
   ],
 };

@@ -1,10 +1,13 @@
 import React from "react"
 import { Link } from "gatsby"
 import Layout from "../components/layout"
+import Seo from "../components/seo"
 
-const AboutPage = () => {
+const AboutPage = ({ location }) => {
   return (
     <Layout>
+      <Seo pagetitle="About"
+        pagepath={location.pathname} />
       <section>
         <div>
           <h1>このブログと書いている人について</h1>

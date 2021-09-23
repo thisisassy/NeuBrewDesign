@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
+import Seo from "../components/seo"
 import Sidebar from "../components/Sidebar/sidebar"
 
 
@@ -9,6 +10,7 @@ const IndexPage = ({ data }) => {
   const Entry = data.entry.edges
   return (
     <Layout>
+      <Seo />
       <section>
         <div className={`NewestEntry`}>
           {RecentEntry.map(({ node }) => (
