@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.neubrewdesign.com",
-    title: "NeuBrewDesign",
+    title: "Neu Brew Design",
     author: "Haruka Ashley",
     description: "デザインとコーディングのメモを中心に生活と読書、考えたことを記録しています",
     lang: "ja",
@@ -19,6 +19,15 @@ module.exports = {
     "gatsby-remark-autolink-headers",
     "gatsby-transformer-remark",
     "gatsby-plugin-react-helmet",
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "G-2330Z1HN6E",
+        head: true,
+        respectDNT: true,
+        excludes: [`/category/**`, `/tag/**`],
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -63,5 +72,17 @@ module.exports = {
         excludes: [`/success`],
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Neu Brew Design`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#A0D8EF`,
+        display: `standalone`,
+        icon: `./static/favicon.png`,
+      },
+    },
+    "gatsby-plugin-offline",
   ],
 };
