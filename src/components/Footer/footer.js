@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer>
       <div className={styles.footer__inner}>
-        <h1>Neu Brew Design</h1>
+        <h1><Link to={`/`}>Neu Brew Design</Link></h1>
         <ul className={styles.footer__nav}>
           <li><Link to={`/`}>All Posts</Link></li>
           <li><Link to={`/about/`}>About</Link></li>

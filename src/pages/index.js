@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
+import Sidebar from "../components/Sidebar/sidebar"
 
 
 const IndexPage = ({ data }) => {
@@ -26,6 +27,8 @@ const IndexPage = ({ data }) => {
             </article>
           ))}
         </div>
+      </section>
+      <section className={`entrySection`}>
         <div className={`NormalEntry`}>
           {Entry.map(({ node }) => (
             <article className={`entryItem`} key={node.frontmatter.slug}>
@@ -43,6 +46,7 @@ const IndexPage = ({ data }) => {
             </article>
           ))}
         </div>
+        <Sidebar />
       </section>
     </Layout>
   )

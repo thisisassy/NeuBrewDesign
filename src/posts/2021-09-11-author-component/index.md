@@ -52,7 +52,6 @@ export default Author
 ```
 // blog-post.js
 import Author from "../components/author"
-
 ```
 表示されたら、スタイルを当てていきましょう。
 
