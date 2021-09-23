@@ -11,7 +11,7 @@ const IndexPage = ({ data }) => {
       <section>
         <div className={`NewestEntry`}>
           {RecentEntry.map(({ node }) => (
-            <article key={node.frontmatter.slug}>
+            <article className={`recentItem`} key={node.frontmatter.slug}>
               <Link to={`/${node.frontmatter.slug}`}>
                 <figure></figure>
                 <div className={`entryHeader`}>
@@ -28,7 +28,7 @@ const IndexPage = ({ data }) => {
         </div>
         <div className={`NormalEntry`}>
           {Entry.map(({ node }) => (
-            <article key={node.frontmatter.slug}>
+            <article className={`entryItem`} key={node.frontmatter.slug}>
               <Link to={`/${node.frontmatter.slug}`}>
                 <figure></figure>
                 <div className={`entryHeader`}>
@@ -62,7 +62,7 @@ export const query = graphql`
       }
     }
   }
-  entry: allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}, skip: 3) {
+  entry: allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}, skip: 3, limit: 7) {
     edges {
       node {
         frontmatter {
