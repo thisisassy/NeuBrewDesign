@@ -1,10 +1,12 @@
 import React from "react"
 import Layout from "../components/layout"
+import Seo from "../components/seo"
 import "../styles/pages/contact.module.scss"
 
 const ContactPage = () => {
   return (
     <Layout>
+      <Seo pagetitle="Contact" />
       <section className={`contact__container`}>
         <h2>Contact</h2>
         <div className={`contact__form`}>

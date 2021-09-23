@@ -3,8 +3,9 @@ module.exports = {
     siteUrl: "https://www.neubrewdesign.com",
     title: "NeuBrewDesign",
     author: "Haruka Ashley",
-    description: "こんにちは。デザイン、コーディング、旅行、本のメモ、生活の向上と生き方についての話題を扱うブログです。",
+    description: "デザインとコーディングのメモを中心に生活と読書、考えたことを記録しています",
     lang: "ja",
+    locale: "ja_JP",
   },
   plugins: [
     "gatsby-plugin-sass",
@@ -17,6 +18,7 @@ module.exports = {
     "gatsby-remark-prismjs",
     "gatsby-remark-autolink-headers",
     "gatsby-transformer-remark",
+    "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -52,6 +54,13 @@ module.exports = {
             },
           },
         ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: `/sitemap.xml`,
+        excludes: [`/success`],
       },
     },
   ],

@@ -1,9 +1,11 @@
 import React from "react"
 import Layout from "../components/layout"
+import Seo from "../components/seo"
 
 const Policy = () => {
   return (
     <Layout>
+      <Seo pagetitle="Privacy Policy" />
       <section>
         <div>
           <h3>Privacy Policy | プライバシーポリシーおよび免責事項</h3>
