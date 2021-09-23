@@ -26,7 +26,7 @@ const IndexPage = ({ data }) => {
             </article>
           ))}
         </div>
-        <div className={`entry`}>
+        <div className={`NormalEntry`}>
           {Entry.map(({ node }) => (
             <article key={node.frontmatter.slug}>
               <Link to={`/${node.frontmatter.slug}`}>
