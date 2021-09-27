@@ -5,6 +5,7 @@ date: "2021-09-11"
 draft: false
 category: ["Tech"]
 tags: ["GatsbyJS"]
+emoji: "🛠"
 ---
 
 こんにちは、[Haruka](https://twitter.com/neubrewdesign)です。

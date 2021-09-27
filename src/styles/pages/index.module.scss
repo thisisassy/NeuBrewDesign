@@ -34,6 +34,18 @@ article {
     }
   }
 }
+.entry__thumbnail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $light-white;
+  height: 200px;
+
+  & > span {
+    font-size: 48px;
+    line-height: 48px;
+  }
+}
 .entryHeader {
   p {
     color: $gray;
@@ -47,7 +59,19 @@ article {
 // other entries
 .entryItem {
   margin: 0 0 $spacing-5;
-  @include mq() {
-    width: calc(100% - 40%);
+  a {
+    display: flex;
+    flex-flow: column wrap;
+
+    @include mq() {
+      flex-flow: row-reverse;
+      justify-content: space-between;
+    }
+  }
+  figure {
+    @include mq() {
+      min-width: 40%;
+      margin: 0 0 0 $spacing-3;
+    }
   }
 }

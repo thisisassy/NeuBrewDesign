@@ -5,6 +5,7 @@ date: "2021-09-10"
 draft: false
 category: ["Life"]
 thumbnail: ./hero.png
+emoji: "💉"
 ---
 
 9月10日の夜に、1回目のワクチン接種を受けました。

@@ -12,6 +12,7 @@
 .entry__header {
   box-shadow: none;
   padding: 0;
+  margin: 0;
   .entry__title {
     margin: 0;
     padding: 0;
@@ -22,6 +23,19 @@
     align-items: center;
     margin: 8px 0 0;
     column-gap: $spacing-2;
+  }
+}
+.thumbnail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background: $light-white;
+  margin: $spacing-3 0;
+
+  & > span {
+    font-size: 88px;
+    line-height: 88px;
   }
 }
 .entry__content {

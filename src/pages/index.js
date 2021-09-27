@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
+import Emoji from "react-emoji-render"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Sidebar from "../components/Sidebar/sidebar"
@@ -16,7 +17,9 @@ const IndexPage = ({ data }) => {
           {RecentEntry.map(({ node }) => (
             <article className={`recentItem`} key={node.frontmatter.slug}>
               <Link to={`/${node.frontmatter.slug}`}>
-                <figure></figure>
+                <figure className={`entry__thumbnail`}>
+                  <Emoji text={node.frontmatter.emoji || "📝"} />
+                </figure>
                 <div className={`entryHeader`}>
                   <h2>{node.frontmatter.title}</h2>
                   <p>{node.excerpt}</p>
@@ -35,7 +38,9 @@ const IndexPage = ({ data }) => {
           {Entry.map(({ node }) => (
             <article className={`entryItem`} key={node.frontmatter.slug}>
               <Link to={`/${node.frontmatter.slug}`}>
-                <figure></figure>
+                <figure className={`entry__thumbnail`}>
+                  <Emoji text={node.frontmatter.emoji || "📝"} />
+                </figure>
                 <div className={`entryHeader`}>
                   <h2>{node.frontmatter.title}</h2>
                   <p>{node.excerpt}</p>
@@ -63,6 +68,7 @@ export const query = graphql`
           date(formatString: "MMM D YYYY")
           category
           slug
+          emoji
         }
         excerpt(pruneLength: 140)
       }
@@ -76,6 +82,7 @@ export const query = graphql`
           date(formatString: "MMM D YYYY")
           category
           slug
+          emoji
         }
         excerpt(pruneLength: 140)
       }
