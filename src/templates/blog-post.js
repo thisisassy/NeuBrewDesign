@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import Emoji from "react-emoji-render"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
@@ -18,7 +19,9 @@ const BlogPost = ({ data }) => {
               <p className={`entry__category`}><Link to={`/`}>{post.frontmatter.category}</Link></p>
             </div>
           </header>
-          <figure></figure>
+          <figure className={`thumbnail`} >
+            <Emoji text={post.frontmatter.emoji || "📝"} />
+          </figure>
           <div className={`entry__content`} dangerouslySetInnerHTML={{ __html: post.html }} />
           <footer className={`entry__footer`}></footer>
         </div>
@@ -38,6 +41,7 @@ query($slug: String!){
         category
         slug
         tags
+        emoji
       }
       tableOfContents
     }
