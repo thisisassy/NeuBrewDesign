@@ -1,0 +1,27 @@
+@import '../../styles/variables.scss';
+
+.authorItem {
+  background: $light-white;
+  padding: $spacing-3 $spacing-4;
+
+  & > h3 {
+    margin: 0 0 $spacing-2;
+  }
+}
+
+.authorBody {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  column-gap: $spacing-2;
+  h4 {
+    margin: 0 0 $spacing-1;
+  }
+  a {
+    border-bottom: 1px solid $text;
+  }
+  img {
+    width: 120px;
+    border-radius: 50%;
+  }
+}

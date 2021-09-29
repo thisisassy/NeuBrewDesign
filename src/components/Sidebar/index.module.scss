@@ -8,12 +8,23 @@
   }
 }
 .sideModule {
-  padding: 32px 24px;
-  margin: 0 0 48px;
+  padding: $spacing-4 $spacing-3;
+  margin: 0 0 $spacing-5;
   h3 {
-    margin: 0 0 8px;
+    margin: 0 0 $spacing-1;
   }
 }
 .profileModule {
   background: $light-white;
+  display: flex;
+  flex-direction: column;
+  & > img {
+    width: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+  a {
+    display: inline;
+    border-bottom: 1px solid $text;
+  }
 }
