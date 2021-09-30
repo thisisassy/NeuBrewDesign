@@ -5,7 +5,7 @@ slug: "30-things-to-do-before-turn-30"
 draft: false
 category: ["Life"]
 tags: ["Bucketlist"]
-thumbnail: ./hero.png
+emoji: "💃"
 ---
 
 English list follows after Japanese text.
