@@ -11,17 +11,20 @@ const AllPosts = ({ data }) => {
     <Layout>
       <Seo />
       <section>
-        <h2>All Posts<span>{sum}</span></h2>
-        <div>
+        <h2 className={`pageHeading`}>All Posts<span className={`count`}>{sum}</span></h2>
+        <div className={`allPosts`}>
           {posts.map(({ node }) => (
-            <article key={node.frontmatter.slug}>
+            <article className={`allPostsItem`} key={node.frontmatter.slug}>
               <Link to={`/${node.frontmatter.slug}`}>
-                <figure>
+                <figure className={`allPostsThumbnail`}>
                   <Emoji text={node.frontmatter.emoji || "📝"} />
                 </figure>
-                <div>
+                <div className={`allPostsItemHeader`}>
                   <h3>{node.frontmatter.title}</h3>
-                  <p><time dateTime={node.frontmatter.date}>{node.frontmatter.date}</time></p>
+                  <div className={`allPostsItemMeta`}>
+                    <p><time dateTime={node.frontmatter.date}>{node.frontmatter.date}</time></p>
+                    <p>{node.frontmatter.category}</p>
+                  </div>
                 </div>
               </Link>
             </article>
@@ -42,6 +45,7 @@ export const query = graphql`
             slug
             emoji
             date(formatString: "MMM DD YYYY")
+            category
           }
         }
       }

@@ -8,7 +8,7 @@ const Author = () => {
     <div className={styles.authorItem}>
       <h3 className={styles.heading}>この記事を書いた人</h3>
       <div className={styles.authorBody}>
-        <img src={Profile} alt="" />
+        <div className={styles.authorImage}><img src={Profile} alt="" /></div>
         <div>
           <h4>Haruka</h4>
           <p>デザインとコーディングのメモ。生活と読書、思考の記録を書いています。</p>
