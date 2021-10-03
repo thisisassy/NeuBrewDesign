@@ -6,10 +6,12 @@
 @import "../components/Header/index.module.scss";
 @import "../components/Footer/index.module.scss";
 @import "../components/Sidebar/index.module.scss";
+@import "../components/Author/index.module.scss";
 
 //pages
 @import "../styles/pages/contact.module.scss";
 @import "../styles/pages/index.module.scss";
+@import "../styles/pages/allposts.module.scss";
 
 //templates
 @import "../styles/templates/entry.module.scss";

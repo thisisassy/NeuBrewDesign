@@ -1,0 +1,34 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixin.scss';
+
+.authorItem {
+  background: $light-white;
+  padding: $spacing-3 $spacing-4;
+
+  & > h3 {
+    margin: 0 0 $spacing-2;
+  }
+}
+
+.authorBody {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  column-gap: $spacing-2;
+  h4 {
+    margin: 0 0 $spacing-1;
+  }
+  a {
+    border-bottom: 1px solid $text;
+  }
+  img {
+    width: 100%;
+    border-radius: 50%;
+  }
+}
+.authorImage {
+  width: 200px;
+  @include mq() {
+    width: 100px;
+  }
+}
