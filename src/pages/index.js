@@ -55,6 +55,7 @@ const IndexPage = ({ data }) => {
         </div>
         <Sidebar />
       </section>
+      <p className={`seeMoreLink`}><Link to={`/allposts/`}>See more posts</Link></p>
     </Layout>
   )
 }
@@ -70,7 +71,7 @@ export const query = graphql`
           slug
           emoji
         }
-        excerpt(pruneLength: 140)
+        excerpt(format: PLAIN, pruneLength: 80, truncate: true)
       }
     }
   }
@@ -84,7 +85,7 @@ export const query = graphql`
           slug
           emoji
         }
-        excerpt(pruneLength: 140)
+        excerpt(format: PLAIN, pruneLength: 80, truncate: true)
       }
     }
   }

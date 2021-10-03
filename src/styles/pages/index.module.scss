@@ -12,22 +12,21 @@ article {
   flex-direction: column;
   @include mq() {
     flex-direction: row;
-    column-gap: 64px;
+    column-gap: $spacing-7;
   }
 }
 // three recent entries
 .NewestEntry {
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
   @include mq() {
-    flex-flow: row;
-    justify-content: space-between;
+    flex-direction: row;
   }
 }
 .recentItem{
   margin: 0 0 $spacing-5;
   @include mq() {
-    margin: 0 64px 64px 0;
+    margin: 0 $spacing-7 $spacing-7 0;
     width: calc((100% - 64px * (3 - 1)) / 3 - 0.1px);
     &:last-child {
       margin-right: 0;
@@ -54,7 +53,7 @@ article {
 }
 .entryMeta {
   display: flex;
-  column-gap: 16px;
+  column-gap: $spacing-2;
 }
 // other entries
 .entryItem {
@@ -72,6 +71,25 @@ article {
     @include mq() {
       min-width: 40%;
       margin: 0 0 0 $spacing-3;
+    }
+  }
+}
+
+.seeMoreLink {
+  width: 100%;
+  text-align: center;
+  margin: $spacing-8 0;
+
+  a {
+    padding: $spacing-1 $spacing-2;
+    border: 1px solid $text;
+    border-radius: 50px;
+    font-size: 18px;
+
+    &:hover,
+    &:focus {
+      background: $text;
+      color: $white;
     }
   }
 }

@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 import Emoji from "react-emoji-render"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import Author from "../components/Author/author"
 
 const BlogPost = ({ data }) => {
   const post = data.markdownRemark
@@ -25,6 +26,7 @@ const BlogPost = ({ data }) => {
           <div className={`entry__content`} dangerouslySetInnerHTML={{ __html: post.html }} />
           <footer className={`entry__footer`}></footer>
         </div>
+        <Author />
       </article>
     </Layout>
   )

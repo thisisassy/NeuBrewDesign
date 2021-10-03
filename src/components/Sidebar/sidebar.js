@@ -1,14 +1,17 @@
 import React from "react"
 import { Link } from "gatsby"
 import * as styles from "../Sidebar/index.module.scss"
+import Profile from "../../images/profile.jpg"
 
 const Sidebar = () => {
   return (
     <aside className={styles.sidebar}>
       <div className={`${styles.sideModule} ${styles.profileModule}`}>
         <h3>Profile</h3>
-        <p>Haruka Ashley. デザインとコーディングのメモ。生活と読書、思考の記録を書いています。</p>
-        <Link to={`/about/`}>詳しいプロフィールをみる</Link>
+        <img src={Profile} alt="" />
+        <h3>Haruka Ashley</h3>
+        <p>デザインとコーディングのメモ。生活と読書、思考の記録を書いています。</p>
+        <p><Link to={`/about/`}>詳しいプロフィールをみる</Link></p>
       </div>
       <div className={`${styles.sideModule} ${styles.sponsoredModule}`}>
         <h3>Sponsored</h3>
