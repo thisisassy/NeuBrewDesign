@@ -3,6 +3,7 @@ title: "ブログ運営報告：1年間の道すじ"
 date: "2021-06-06"
 slug: "blog-report-1year"
 category: ["Blog"]
+tags: ["ブログ運営"]
 thumbnail: ./thumbnail.jpg
 ---
 
