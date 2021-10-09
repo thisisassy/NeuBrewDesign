@@ -13,6 +13,14 @@ const Sidebar = () => {
         <p>デザインとコーディングのメモ。生活と読書、思考の記録を書いています。</p>
         <p><Link to={`/about/`}>詳しいプロフィールをみる</Link></p>
       </div>
+      <div className={styles.sideModule}>
+        <h3>Feature</h3>
+        <ul className={`entry__tags`}>
+          {/* {post.frontmatter.tags.map(tag => ( */}
+          <li>#tag</li>
+          {/* // ))}  */}
+        </ul>
+      </div>
       <div className={`${styles.sideModule} ${styles.sponsoredModule}`}>
         <h3>Sponsored</h3>
         <div><a href="https://px.a8.net/svt/ejp?a8mat=3HE1B0+BLYBG2+3F5M+626XT" rel="nofollow">

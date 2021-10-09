@@ -4,6 +4,7 @@ slug: "2021-09-10-got-a-first-vaccine"
 date: "2021-09-10"
 draft: false
 category: ["Life"]
+tags: []
 thumbnail: ./hero.png
 emoji: "💉"
 ---

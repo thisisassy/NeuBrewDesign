@@ -88,9 +88,9 @@
   img {
     border: 1px solid #eee;
   }
-  ul,
-  ol,
-  dl {
+  & > ul,
+  & > ol,
+  & > dl {
     padding-inline-start: 1rem;
     li {
       font-size: 18px;
@@ -118,6 +118,20 @@
     }
   }
 }
+
 .entry__footer {
+  background: $white;
   margin: $spacing-7 0 0;
+  padding: 0;
+}
+
+.entry__tags {
+  li {
+    display: inline-block;
+    line-height: 1.5;
+    margin: 0 $spacing-1 0 0;
+    padding: $spacing-half $spacing-1;
+    border: 1px solid $light-gray;
+    border-radius: 2px;
+  }
 }
