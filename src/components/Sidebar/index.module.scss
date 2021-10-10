@@ -7,6 +7,7 @@
     max-width: 30%;
   }
 }
+
 .sideModule {
   padding: $spacing-4 $spacing-3;
   margin: 0 0 $spacing-5;
@@ -14,6 +15,7 @@
     margin: 0 0 $spacing-1;
   }
 }
+
 .profileModule {
   background: $light-white;
   display: flex;
@@ -26,5 +28,20 @@
   a {
     display: inline;
     border-bottom: 1px solid $text;
+  }
+}
+
+.entry__tags {
+  & > li {
+    margin:  0 $spacing-1 $spacing-1 0 !important;
+
+    a {
+      margin: 0 0 0 $spacing-half;
+    }
+
+    span {
+      margin: 0 0 0 $spacing-half;
+      color: $gray;
+    }
   }
 }

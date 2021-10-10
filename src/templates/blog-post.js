@@ -27,7 +27,7 @@ const BlogPost = ({ data }) => {
           <footer className={`entry__footer`}>
             <ul className={`entry__tags`}>
               {post.frontmatter.tags.map(tag => (
-                <li key={tag}>#{tag}</li>
+                <li key={tag}><Link to={`/tags/${tag.fieldValue}/`}>#{tag}</Link></li>
               ))}
             </ul>
           </footer>
