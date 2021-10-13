@@ -24,7 +24,13 @@ const BlogPost = ({ data }) => {
             <Emoji text={post.frontmatter.emoji || "📝"} />
           </figure>
           <div className={`entry__content`} dangerouslySetInnerHTML={{ __html: post.html }} />
-          <footer className={`entry__footer`}></footer>
+          <footer className={`entry__footer`}>
+            <ul className={`entry__tags`}>
+              {post.frontmatter.tags.map(tag => (
+                <li key={tag}><Link to={`/tags/${post.frontmatter.tags}/`}>#{tag}</Link></li>
+              ))}
+            </ul>
+          </footer>
         </div>
         <Author />
       </article>

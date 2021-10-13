@@ -6,7 +6,7 @@ import Profile from "../../images/profile.jpg"
 const Author = () => {
   return (
     <div className={styles.authorItem}>
-      <h3 className={styles.heading}>この記事を書いた人</h3>
+      <h3>この記事を書いた人</h3>
       <div className={styles.authorBody}>
         <div className={styles.authorImage}><img src={Profile} alt="" /></div>
         <div>

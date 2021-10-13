@@ -5,10 +5,11 @@ exports.createPages = async gatsbyNodeHelpers => {
   const { createPage } = actions
 
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  const tagTemplate = path.resolve('./src/templates/tags.js')
 
   const result = await graphql(`
   {
-    allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
+    posts: allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
       edges {
         node {
           frontmatter {
@@ -18,6 +19,11 @@ exports.createPages = async gatsbyNodeHelpers => {
         }
       }
     }
+    tags: allMarkdownRemark {
+      group(field: frontmatter___tags) {
+        fieldValue
+      }
+    }
   }
   `)
   if (result.errors) {
@@ -25,7 +31,7 @@ exports.createPages = async gatsbyNodeHelpers => {
     return
   }
 
-  const posts = result.data.allMarkdownRemark.edges
+  const posts = result.data.posts.edges
 
   // blog posts
   posts.forEach(({ node }) => {
@@ -34,6 +40,20 @@ exports.createPages = async gatsbyNodeHelpers => {
       component: blogPost,
       context: {
         slug: node.frontmatter.slug,
+      },
+    })
+  })
+
+  // tags page
+
+  const tags = result.data.tags.group
+
+  tags.forEach(tag => {
+    createPage({
+      path: `/tags/${tag.fieldValue}/`,
+      component: tagTemplate,
+      context: {
+        tag: tag.fieldValue,
       },
     })
   })
