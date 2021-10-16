@@ -4,7 +4,7 @@ slug: "2021-06-21-study-money"
 date: "2021-06-21"
 draft: false
 category: ["Life"]
-tags: ["お金", "節約"]
+tags: ["お金"]
 thumbnail: ./thumbnail.jpg
 ---
 

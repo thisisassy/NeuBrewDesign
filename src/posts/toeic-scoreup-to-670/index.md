@@ -3,7 +3,7 @@ title: "TOEICスコアを1年で435点から670点まで上げた"
 date: "2021-06-07"
 slug: "toeic-scoreup-to-670"
 draft: false
-tags: ["TOEIC","Diary"]
+tags: ["TOEIC"]
 category: ["English"]
 thumbnail: ./thumbnail.jpg
 ---

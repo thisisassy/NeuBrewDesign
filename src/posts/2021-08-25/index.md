@@ -4,7 +4,7 @@ date: 2021-08-25
 slug: "2021-08-25"
 draft: false
 category: ["Study"]
-tags: ["放送大学","Diary"]
+tags: ["放送大学"]
 emoji: "🏫"
 ---
 

@@ -4,7 +4,7 @@ slug: "2021-06-18-gatsby-scss-css-modules"
 date: "2021-06-18"
 draft: false
 category: ["Tech"]
-tags: ["GatsbyJS", "Sass"]
+tags: ["GatsbyJS"]
 thumbnail: ./hero.jpg
 ---
 

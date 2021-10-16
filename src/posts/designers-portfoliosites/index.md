@@ -4,7 +4,7 @@ slug: "designers-portfoliosites"
 date: "2021-06-13"
 draft: false
 category: ["Tech"]
-tags: ["ポートフォリオ", "Web Design"]
+tags: ["Web Design"]
 thumbnail: ./thumbnail.jpg
 ---
 
