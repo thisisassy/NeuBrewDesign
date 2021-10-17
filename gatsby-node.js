@@ -1,3 +1,4 @@
+const { create } = require("domain")
 const path = require("path")
 
 exports.createPages = async gatsbyNodeHelpers => {
@@ -6,6 +7,7 @@ exports.createPages = async gatsbyNodeHelpers => {
 
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
   const tagTemplate = path.resolve('./src/templates/tags.js')
+  const catTemplate = path.resolve('./src/templates/categories.js')
 
   const result = await graphql(`
   {
@@ -21,6 +23,11 @@ exports.createPages = async gatsbyNodeHelpers => {
     }
     tags: allMarkdownRemark {
       group(field: frontmatter___tags) {
+        fieldValue
+      }
+    }
+    categories: allMarkdownRemark {
+      group(field: frontmatter___category) {
         fieldValue
       }
     }
@@ -45,7 +52,6 @@ exports.createPages = async gatsbyNodeHelpers => {
   })
 
   // tags page
-
   const tags = result.data.tags.group
 
   tags.forEach(tag => {
@@ -54,6 +60,19 @@ exports.createPages = async gatsbyNodeHelpers => {
       component: tagTemplate,
       context: {
         tag: tag.fieldValue,
+      },
+    })
+  })
+
+  // category
+  const categories = result.data.categories.group
+
+  categories.forEach(category => {
+    createPage({
+      path: `/categories/${category.fieldValue}/`,
+      component: catTemplate,
+      context: {
+        category: category.fieldValue,
       },
     })
   })
