@@ -1,8 +1,20 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 import * as styles from "../Footer/index.module.scss"
 
 const Footer = () => {
+  const data = useStaticQuery(graphql`
+  {
+    allMarkdownRemark {
+      group(field: frontmatter___category) {
+        fieldValue
+        totalCount
+      }
+    }
+  }
+`)
+
+  const category = data.allMarkdownRemark.group
   return (
     <footer>
       <div className={styles.footer__inner}>
@@ -14,11 +26,11 @@ const Footer = () => {
           <li><Link to={`/contact/`}>Contact</Link></li>
         </ul>
         <div className={styles.foot__category}>
-          <li>Blog</li>
-          <li>English</li>
-          <li>Life</li>
-          <li>Study</li>
-          <li>Tech</li>
+          <ul>
+            {category.map(category => (
+              <li><Link to={`/categories/${category.fieldValue}/`}>{category.fieldValue}</Link></li>
+            ))}
+          </ul>
         </div>
         <div className={styles.sponsoredLink}>
           <div>

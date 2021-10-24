@@ -19,6 +19,7 @@ module.exports = {
     "gatsby-remark-autolink-headers",
     "gatsby-transformer-remark",
     "gatsby-plugin-react-helmet",
+    "gatsby-plugin-twitter",
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
