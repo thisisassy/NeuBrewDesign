@@ -23,7 +23,9 @@ footer {
 .footer__inner {
   display: flex;
   flex-direction: column;
-  padding-top: $spacing-5;
+  padding: $spacing-5 20px 0 20px;
+  max-width: 1180px;
+  margin: 0 auto;
   @include mq(){
     flex-direction: row;
     justify-content: space-between;

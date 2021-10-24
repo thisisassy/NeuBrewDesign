@@ -22,10 +22,7 @@ const Footer = () => {
         </div>
         <div className={styles.sponsoredLink}>
           <div>
-            <h4>Sponsored</h4>
-            <a href="https://px.a8.net/svt/ejp?a8mat=3HKDTG+FA4JQQ+4H72+5ZMCH" rel="nofollow">
-              <img border="0" width="300" height="250" alt="" src="https://www27.a8.net/svt/bgt?aid=210903028924&amp;wid=001&amp;eno=01&amp;mid=s00000020891001006000&amp;mc=1" /></a>
-            <img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=3HKDTG+FA4JQQ+4H72+5ZMCH" alt="" />
+            {/* <h4>Sponsored</h4> */}
           </div>
         </div>
       </div>

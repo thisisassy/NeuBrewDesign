@@ -9,8 +9,8 @@ const AboutPage = ({ location }) => {
       <Seo pagetitle="About"
         pagepath={location.pathname} />
       <section>
-        <div>
-          <h1>このブログと書いている人について</h1>
+        <article>
+          <h1>このブログと買いている人について</h1>
           <p>こんにちは。はじめまして、haruka <a href="https://twitter.com/neubrewdesign">(@neubrewdesign)</a>です。<br />
             このブログでは、Webデザインやコーディングなどの技術のことを中心に、生活向上、旅行、本のメモなど新しい暮らしと生き方について実験していく過程を書いています。</p>
           <p>普段はデザイナーとしてWebサイトやサービスのデザインをしています。仕事をしている上で、身についたデザインやコーディングの知見をブログに書いています。そのほかにも、日々の生活の向上や海外移住への道のり、旅行など幅広く話題を扱います。</p>
@@ -24,7 +24,7 @@ const AboutPage = ({ location }) => {
           <p>
             <Link to={`/`}>お問い合わせフォームはこちら</Link>
           </p>
-        </div>
+        </article>
       </section>
     </Layout>
   )

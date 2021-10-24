@@ -6,7 +6,7 @@ import "../styles/styles.scss"
 export default ({ children }) => (
   <div className={`wrapper`}>
     <Header />
-    <main>{children}</main>
+    <main className={`content__inner`}>{children}</main>
     <Footer />
   </div>
 )

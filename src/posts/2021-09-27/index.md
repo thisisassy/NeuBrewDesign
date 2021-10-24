@@ -63,3 +63,9 @@ import { Twemoji } from 'react-emoji-render';
 - https://gdhg.info/posts/gatsby-blog-emoji-thumbnail/
 - https://k-log.netlify.app/blog/gatsby-blog-emoji-thumbnail
 
+
+---
+
+
+##### おすすめの書籍
+<a href="https://www.amazon.co.jp/%E3%80%90%E7%89%B9%E5%85%B8%E4%BB%98%E3%81%8D-%E3%80%91Web%E3%82%B5%E3%82%A4%E3%83%88%E9%AB%98%E9%80%9F%E5%8C%96%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE-%E9%9D%99%E7%9A%84%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AC%E3%83%BC%E3%82%BF%E3%83%BC%E6%B4%BB%E7%94%A8%E5%85%A5%E9%96%80-Compass-Books%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA/dp/4839973008?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=3UBWV0C3JXMKN&dchild=1&keywords=GatsbyJS&qid=1634992548&sprefix=gatsbyjs%2Caps%2C181&sr=8-1&linkCode=li3&tag=akurah510-22&linkId=a6da24aada67ceb526a084efce526781&language=ja_JP&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=4839973008&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akurah510-22&language=ja_JP" ></a><img src="https://ir-jp.amazon-adsystem.com/e/ir?t=akurah510-22&language=ja_JP&l=li3&o=9&a=4839973008" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />

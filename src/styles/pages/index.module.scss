@@ -69,7 +69,8 @@ article {
   }
   figure {
     @include mq() {
-      min-width: 40%;
+      min-width: 225px;
+      height: auto;
       margin: 0 0 0 $spacing-3;
     }
   }

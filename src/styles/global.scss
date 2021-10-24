@@ -51,15 +51,15 @@ main {
     padding: 0;
   }
 }
-section {
-  padding: 0;
-  @include mq(){
-    padding: 0 $spacing-7;
-  }
 
-}
 .wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+.content__inner {
+  max-width: 1180px;
+  padding: 0 20px;
+  margin: 0 auto;
 }
