@@ -1,4 +1,3 @@
-const { create } = require("domain")
 const path = require("path")
 
 exports.createPages = async gatsbyNodeHelpers => {
@@ -17,6 +16,18 @@ exports.createPages = async gatsbyNodeHelpers => {
           frontmatter {
             slug
             title
+          }
+        }
+        next {
+          frontmatter {
+            title
+            slug
+          }
+        }
+        previous {
+          frontmatter {
+            title
+            slug
           }
         }
       }
@@ -41,12 +52,14 @@ exports.createPages = async gatsbyNodeHelpers => {
   const posts = result.data.posts.edges
 
   // blog posts
-  posts.forEach(({ node }) => {
+  posts.forEach(({ node, next, previous }) => {
     createPage({
       path: node.frontmatter.slug,
       component: blogPost,
       context: {
         slug: node.frontmatter.slug,
+        next,
+        previous,
       },
     })
   })

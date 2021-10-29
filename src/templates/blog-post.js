@@ -5,8 +5,9 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Author from "../components/Author/author"
 
-const BlogPost = ({ data }) => {
+const BlogPost = ({ data, pageContext, props }) => {
   const post = data.markdownRemark
+  const { next, previous } = pageContext
 
   return (
     <Layout>
@@ -33,6 +34,10 @@ const BlogPost = ({ data }) => {
           </footer>
         </div>
         <Author />
+        <div className={`pager`}>
+          {previous && (<span><Link to={`/${previous.frontmatter.slug}/`} rel="prev">{previous.frontmatter.title}</Link></span>)}
+          {next && (<span><Link to={`/${next.frontmatter.slug}/`} rel="next">{next.frontmatter.title}</Link></span>)}
+        </div>
       </article>
     </Layout>
   )
