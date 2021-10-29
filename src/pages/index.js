@@ -71,7 +71,7 @@ export const query = graphql`
           slug
           emoji
         }
-        excerpt(format: PLAIN, pruneLength: 80, truncate: true)
+        excerpt(format: PLAIN, pruneLength: 50, truncate: true)
       }
     }
   }

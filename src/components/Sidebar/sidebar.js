@@ -25,7 +25,7 @@ const Sidebar = () => {
         <p>デザインとコーディングのメモ。生活と読書、思考の記録を書いています。</p>
         <Link to={`/about/`}>詳しいプロフィールをみる</Link>
       </div>
-      <div className={`${styles.sideModule} ${styles.featureModule}`}>
+      <div className={styles.sideModule}>
         <h3>Feature</h3>
         <ul className={`entry__tags`}>
           {tag.map(tag => (
@@ -33,7 +33,7 @@ const Sidebar = () => {
           ))}
         </ul>
       </div >
-      <div className={`${styles.sideModule} ${styles.sponsoredModule}`}>
+      <div className={styles.sideModule}>
         <h3>Sponsored</h3>
         <a href="https://px.a8.net/svt/ejp?a8mat=3HMZTY+75SPPU+407E+65U41" rel="nofollow">
           <img border="0" width="300" height="250" alt="" src="https://www26.a8.net/svt/bgt?aid=211024870433&amp;wid=001&amp;eno=01&amp;mid=s00000018689001035000&amp;mc=1" /></a>

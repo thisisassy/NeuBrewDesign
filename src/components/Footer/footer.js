@@ -19,20 +19,20 @@ const Footer = () => {
     <footer>
       <div className={styles.footer__inner}>
         <h1><Link to={`/`}>Neu Brew Design</Link></h1>
-        <ul className={styles.footer__nav}>
+        <ul>
           <li><Link to={`/allposts/`}>All Posts</Link></li>
           <li><Link to={`/about/`}>About</Link></li>
           <li><Link to={`/policy/`}>Privacy Policy</Link></li>
           <li><Link to={`/contact/`}>Contact</Link></li>
         </ul>
-        <div className={styles.foot__category}>
+        <div>
           <ul>
             {category.map(category => (
               <li><Link to={`/categories/${category.fieldValue}/`}>{category.fieldValue}</Link></li>
             ))}
           </ul>
         </div>
-        <div className={styles.sponsoredLink}>
+        <div>
           <div>
             {/* <h4>Sponsored</h4> */}
           </div>
