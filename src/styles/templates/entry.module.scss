@@ -135,3 +135,13 @@
     border-radius: 2px;
   }
 }
+
+.pager {
+  display: flex;
+  justify-content: space-between;
+  gap: $spacing-4;
+  margin: $spacing-6 0 0;
+  padding: $spacing-4 0;
+  border-top: 1px solid $light-gray;
+  border-bottom: 1px solid $light-gray;
+}

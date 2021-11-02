@@ -1,0 +1,18 @@
+@import '../../styles/mixin.scss';
+@import '../../styles/variables.scss';
+
+.relatedPosts {
+  margin: $spacing-4 0 0;
+}
+.heading {
+  font-size: $spacing-2;
+  margin: 0 0 $spacing-1;
+}
+.relatedPostsList {
+  li {
+    margin: 0 0 $spacing-1;
+  }
+  p {
+    color: $gray;
+  }
+}

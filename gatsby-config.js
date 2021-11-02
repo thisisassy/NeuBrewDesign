@@ -85,5 +85,12 @@ module.exports = {
       },
     },
     "gatsby-plugin-offline",
+    {
+      resolve: `gatsby-remark-related-posts`,
+      options: {
+        posts_dir: `${__dirname}/src/posts`,
+        doc_lang: "ja",
+      },
+    },
   ],
 };
