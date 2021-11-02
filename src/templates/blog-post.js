@@ -6,7 +6,7 @@ import Seo from "../components/seo"
 import Author from "../components/Author/author"
 import RelatedPosts from "../components/RelatedPosts/relatedPost"
 
-const BlogPost = ({ data, pageContext, title, category }) => {
+const BlogPost = ({ data, pageContext, title }) => {
   const post = data.markdownRemark
   const { next, previous } = pageContext
 
@@ -39,7 +39,7 @@ const BlogPost = ({ data, pageContext, title, category }) => {
           {previous && (<span><Link to={`/${previous.frontmatter.slug}/`} rel="prev">{previous.frontmatter.title}</Link></span>)}
           {next && (<span><Link to={`/${next.frontmatter.slug}/`} rel="next">{next.frontmatter.title}</Link></span>)}
         </div>
-        <RelatedPosts title={title} category={category}></RelatedPosts>
+        <RelatedPosts title={title}></RelatedPosts>
       </article>
     </Layout>
   )
