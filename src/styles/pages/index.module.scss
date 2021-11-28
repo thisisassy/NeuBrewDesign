@@ -15,6 +15,21 @@ article {
     column-gap: $spacing-7;
   }
 }
+.sectionHead {
+  display: flex;
+  align-items: baseline;
+  margin: 0 0 $spacing-4;
+
+  h3 {
+    margin: 0 $spacing-2 0 0;
+  }
+}
+.catList {
+  li {
+    display: inline-block;
+    margin: 0 $spacing-2 0 0;
+  }
+}
 // three recent entries
 .NewestEntry {
   display: flex;

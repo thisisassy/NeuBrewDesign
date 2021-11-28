@@ -9,10 +9,20 @@ import Sidebar from "../components/Sidebar/sidebar"
 const IndexPage = ({ data }) => {
   const RecentEntry = data.recent.edges
   const Entry = data.entry.edges
+  const category = data.cat.group
+  const sum = data.cat.totalCount
   return (
     <Layout>
       <Seo />
       <section>
+        <div className={`sectionHead`}>
+          <h3>All {sum} posts</h3>
+          <ul className={`catList`}>
+            {category.map(category => (
+              <li><Link to={`/categories/${category.fieldValue}/`}>{category.fieldValue}</Link></li>
+            ))}
+          </ul>
+        </div>
         <div className={`NewestEntry`}>
           {RecentEntry.map(({ node }) => (
             <article className={`recentItem`} key={node.frontmatter.slug}>
@@ -87,6 +97,13 @@ export const query = graphql`
         }
         excerpt(format: PLAIN, pruneLength: 80, truncate: true)
       }
+    }
+  }
+  cat: allMarkdownRemark {
+    totalCount
+    group(field: frontmatter___category) {
+      fieldValue
+      totalCount
     }
   }
 }
