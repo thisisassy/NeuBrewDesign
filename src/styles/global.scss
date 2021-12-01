@@ -59,10 +59,9 @@ main {
 }
 
 .content__inner {
-  width: 100%;
   @include mq() {
-    width: 1180px;
-    padding: 0 20px;
+    max-width: calc( 1472px + ( 64px * 2 ));
     margin: 0 auto;
+    padding: 0 80px;
   }
 }
