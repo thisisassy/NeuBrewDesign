@@ -7,12 +7,22 @@ article {
     line-height: 1.3;
   }
 }
-.entrySection {
-  display:flex;
-  flex-direction: column;
-  @include mq() {
-    flex-direction: row;
-    column-gap: $spacing-7;
+.sectionHead {
+  display: flex;
+  align-items: baseline;
+  margin: 0 0 $spacing-4;
+
+  h3 {
+    margin: 0 $spacing-2 0 0;
+  }
+}
+.catList {
+  li {
+    display: inline-block;
+    margin: 0 $spacing-4 0 0;
+    &:hover {
+      border-bottom: 1px solid $text;
+    }
   }
 }
 // three recent entries
@@ -20,14 +30,15 @@ article {
   display: flex;
   flex-direction: column;
   @include mq() {
-    flex-direction: row;
+    gap: 48px;
+    flex-flow: wrap row;
   }
 }
 .recentItem{
   margin: 0 0 $spacing-5;
   @include mq() {
-    margin: 0 $spacing-7 $spacing-7 0;
-    width: calc((100% - 64px * (3 - 1)) / 3 - 0.1px);
+    margin: 0 0 $spacing-7;
+    width: calc((100% - 80px * (3 - 1)) / 3 - 0.1px);
     &:last-child {
       margin-right: 0;
     }

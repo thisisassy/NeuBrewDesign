@@ -7,8 +7,8 @@ header {
   padding: 0 24px;
   box-shadow: 1px 1px 0 rgb(0 0 0 / 8%);
   @include mq() {
-    margin: 0 auto 96px;
-    padding: 0 64px;
+    margin: 0 auto 56px;
+    padding: 0 80px;
   }
 }
 .header__inner {
