@@ -13,7 +13,7 @@ const Categories = ({ data, pageContext }) => {
     <Layout>
       <Seo pagetitle={catHeader} />
       <section>
-        <h1>{catHeader}<span>{totalCount}</span></h1>
+        <h1 className={`catHeader`}>{catHeader}<span>{totalCount}</span></h1>
         <div className={`tagEntry`}>
           {edges.map(({ node }) => (
             <article className={`tagEntryItem`} key={node.frontmatter.slug}>

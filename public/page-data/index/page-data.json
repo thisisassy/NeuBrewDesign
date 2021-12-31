@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-pages-index-js",
     "path": "/",
-    "result": {"data":{"cat":{"totalCount":23,"group":[{"fieldValue":"Blog","totalCount":4},{"fieldValue":"English","totalCount":1},{"fieldValue":"Life","totalCount":6},{"fieldValue":"Study","totalCount":3},{"fieldValue":"Tech","totalCount":9}]}},"pageContext":{}},
+    "result": {"data":{"cat":{"totalCount":24,"group":[{"fieldValue":"Blog","totalCount":4},{"fieldValue":"English","totalCount":1},{"fieldValue":"Life","totalCount":7},{"fieldValue":"Study","totalCount":3},{"fieldValue":"Tech","totalCount":9}]}},"pageContext":{}},
     "staticQueryHashes": ["1251827014","4173678595","588207425"]}
