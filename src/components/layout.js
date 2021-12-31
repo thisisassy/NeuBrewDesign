@@ -1,7 +1,7 @@
 import React from "react"
 import Header from "./Header/header"
 import Footer from "./Footer/footer"
-import "../styles/styles.scss"
+import "../styles/global.scss"
 
 export default ({ children }) => (
   <div className={`wrapper`}>
